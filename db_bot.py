@@ -38,7 +38,7 @@ async def start(message:types.Message):
                        message.from_user.first_name, message.from_user.last_name, ctime()))
         cursor.connection.commit()
     await message.answer(f"Здраствуйте {message.from_user.full_name}")
-
+    
 class MailingState(StatesGroup):
     message= State()
 
